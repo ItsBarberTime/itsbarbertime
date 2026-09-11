@@ -18,43 +18,74 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#">Its Barber Time</a>
-      <nav class="nav-links">
-        <a href="#locations">Locations</a>
-        <a href="#contact">Contact</a>
-        <a href="policy.html">Private Policy</a>
-        <a href="policy.html">Terms of Service</a>
-        <a href="delete-account.html">Account Delection</a>
-        <a href="support.html">Support</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/its-barbertime-booking/id6795333085" target="_blank" rel="noreferrer">Download For Apple</a>
-        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.itsbarbertime.booking&hl=en_US" target="_blank" rel="noreferrer">Download For Andriod</a>
-      </nav>
+      <div class="brand-block">
+        <a class="brand" href="#">Its Barber Time</a>
+        <span class="est">Est. 2007</span>
+      </div>
+
+      <div class="nav-right">
+        <a
+          class="nav-cta"
+          href="https://apps.apple.com/app/its-barbertime-booking/id6795333085"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Download for Apple
+        </a>
+        <a
+          class="nav-cta"
+          href="https://play.google.com/store/apps/details?id=com.itsbarbertime.booking&hl=en_US"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Download for Android
+        </a>
+
+        <div class="menu">
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="menuPanel"
+          >
+            Menu
+            <svg class="menu-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="menu-panel" id="menuPanel" role="menu">
+            <a role="menuitem" href="#locations">Locations</a>
+            <a role="menuitem" href="#contact">Contact</a>
+            <a role="menuitem" href="policy.html">Privacy Policy</a>
+            <a role="menuitem" href="policy.html">Terms of Service</a>
+            <a role="menuitem" href="delete-account.html">Account Deletion</a>
+            <a role="menuitem" href="support.html">Support</a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-content">
-          <img
-            class="logo"
-            <img src="bbtapplogo.PNG" />
-       
-          
-          <h1>Book With Our App </h1>
+          <img class="logo" src="bbtapplogo.PNG" alt="Its Barber Time logo" />
+
+          <h1>Book with our app</h1>
           <p>
             Download the Barber Time app to easily book appointments, manage your
             bookings, and stay updated with the latest offers and promotions at our
             barbershop. Experience convenient scheduling and personalized grooming
             services with the Barber Time booking app.
           </p>
-          <p class="highlight">
-            
-          </p>
+
           <div class="stats">
             <div class="stat-card">
-              <strong>2499+</strong>
-              <span>Cuts Delivered</span>
+              <strong>2,499+</strong>
+              <span>Cuts delivered</span>
             </div>
           </div>
+
           <div class="buttons">
             <a
               class="button"
@@ -76,9 +107,9 @@
         </div>
 
         <div class="gallery" aria-label="Barbertime gallery">
-          <img src="IMG_4078.jpg" alt="Barber time service" />
-          <img src="IMG_4079 (1).jpg" alt="Barber time " />
-          <img src="IMG_4081.jpg" alt="Barber time grooming" />
+          <img src="IMG_4078.jpg" alt="Barber cutting a client's hair" />
+          <img src="IMG_4079 (1).jpg" alt="Finished fade haircut at Barber Time" />
+          <img src="IMG_4081.jpg" alt="Barber Time shop interior" />
         </div>
       </section>
 
@@ -86,7 +117,7 @@
         <h2>Our locations</h2>
         <div class="location-grid">
           <article>
-            <h3>Castor & Princeton</h3>
+            <h3>Castor &amp; Princeton</h3>
             <iframe
               title="Map for Castor & Princeton"
               src="https://www.google.com/maps?q=BarberTime%20Castor%20%26%20Princeton&output=embed"
@@ -95,7 +126,7 @@
             ></iframe>
           </article>
           <article>
-            <h3>Frankford & Rhawn</h3>
+            <h3>Frankford &amp; Rhawn</h3>
             <iframe
               title="Map for Frankford & Rhawn"
               src="https://www.google.com/maps?q=BarberTime%20Frankford%20%26%20Rhawn&output=embed"
@@ -107,19 +138,30 @@
       </section>
 
       <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>For any questions or inquiries please fill in the form below.</p>
+        <h2>Contact us</h2>
+        <p>For any questions or inquiries, fill in the form below.</p>
         <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Submit</button>
+          <label class="field">
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Jane Doe" required />
+          </label>
+          <label class="field">
+            <span>Your email</span>
+            <input type="email" name="email" placeholder="jane@example.com" required />
+          </label>
+          <label class="field">
+            <span>Your message</span>
+            <textarea name="message" placeholder="How can we help?" required></textarea>
+          </label>
+          <button type="submit">Send message</button>
         </form>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Its Barber Time. Book your next cut with the app.</p>
+      <p>&copy; 2026 Its Barber Time. Book your next cut with the app.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
